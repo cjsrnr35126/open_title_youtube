@@ -44,29 +44,31 @@ ndf=c(inner_title,content_title);ndf
 
 ![캡처](https://user-images.githubusercontent.com/49007889/56267485-eb417600-6129-11e9-97fb-5768211a5fbe.PNG)
 
-이제 script를 taskschduelR의 extdata 폴더에 옮긴다음 아래 코드를 실행한다.
+script를 taskschduelR의 extdata 폴더에 저장한 다음 아래 코드를 실행한다.
 
 --------------------------
 
 <pre><code>
 if(!require(taskscheduleR))install.packages("taskscheduleR")
 library(taskscheduleR)
-myscript <- system.file("extdata", "exp.R", package = "taskscheduleR")
+myscript <- system.file("extdata", "ytb_title.R", package = "taskscheduleR")
 taskscheduler_create(taskname = "dailyload", rscript = myscript, 
                      schedule = "DAILY", starttime = "10:30", startdate = format(Sys.Date()+1, "%Y/%m/%d"))
 
-#mylog <- system.file("extdata", "exp.log", package = "taskscheduleR")
+#mylog <- system.file("extdata", "ytb_title.log", package = "taskscheduleR")
 #cat(readLines(mylog), sep = "\n")
 </code></pre>
 
 -----------------------------
 
 myscript에 실행시킬 파일을 저장해놓은다음 taskscheduler_create함수를 이용하여 task를 생성한다. 위의경우 다음날 오전10:30부터 이후 매일 오전 10:30에 myscript를 실행시키라는 의미이다. (Sys.Date()+1 에서 +1을 제거할 경우 오늘부터 가능) <br>
-exp.R이 저장된 장소에 exp.log이 생성된다. exp.log 에 크롤링한 결과값들이 저장된다. 이를 폴더를 찾아가지않고 R에서 불러오고자 할 경우 mylog부분 코드를 실행하면된다.
+script가 저장된 장소에 .log 파일이 생성된다. .log 에 크롤링한 결과값들이 저장되어 있다. 이를 폴더를 찾아가지않고 R에서 불러오고자 할 경우 mylog부분 코드를 실행하면된다.
 
 -----------------------------
 
 ![캡처](https://user-images.githubusercontent.com/49007889/56267802-d6191700-612a-11e9-9e37-ce58cb405aec.PNG)
 
 -----------------------------
+
+## 3일차 데이터 누적
 
