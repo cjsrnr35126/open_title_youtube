@@ -62,7 +62,7 @@ taskscheduler_create(taskname = "dailyload", rscript = myscript,
 -----------------------------
 
 myscript에 실행시킬 파일을 저장해놓은다음 taskscheduler_create함수를 이용하여 task를 생성한다. 위의경우 다음날 오전10:30부터 이후 매일 오전 10:30에 myscript를 실행시키라는 의미이다. (Sys.Date()+1 에서 +1을 제거할 경우 오늘부터 가능) <br>
-exp.log에 크롤링한 결과값들이 저장된다. 이를 폴더를 찾아가지않고 R에서 불러오고자 할 경우 mylog부분 코드를 실행하면된다.
+exp.R이 저장된 장소에 exp.log이 생성된다. exp.log 에 크롤링한 결과값들이 저장된다. 이를 폴더를 찾아가지않고 R에서 불러오고자 할 경우 mylog부분 코드를 실행하면된다.
 
 -----------------------------
 
