@@ -8,7 +8,7 @@
    "어떠한 영상을 올려야 조회수가 잘 나올까?" <br>
   영상의 '질'에 대한 문제는 논외로 한다면 '제목'과 '섬네일'이 남는다. 그중 제목의 경우, 이미 많은 사람들이 어떻게 해야 좋은 글과 좋은 제목을 지을 수 있을지 고민해 왔다. 이를 '영상'에도 접목시킨다면 아주 쉽게 문제가 해결될 것이다.
 </p>
-<p>실제로 유튜브 인기탭에 오르내리는 영상들의 제목을 얻어와서 '<a href='https://brunch.co.kr/@oms1225/104'>매력적인 제목 짓기'</a>매뉴얼이 유의미한지 검증해 볼 것이다.</p>
+<p>실제로 플랫폼 인기탭에 오르내리는 영상들의 제목을 얻어와서 '<a href='https://brunch.co.kr/@oms1225/104'>매력적인 제목 짓기'</a>매뉴얼이 유의미한지 검증해 볼 것이다.</p>
 
 ## R-code
 
@@ -34,17 +34,21 @@ ndf=c(inner_title,content_title);ndf
 
 -------------------------------------
 
-하루치 정보로는 턱없이 부족하다. 이제 위 코드를 매일 특정시간에 실행시켜서 데이터를 축적해야한다. 크롤링 코드를 'script'라는 이름으로 저장한다.<br>
+하루치 정보로는 턱없이 부족하다. 이제 위 코드를 매일 특정시간에 실행시켜서 데이터를 축적해야한다. <br>
 자동화를 위해 taskscheduleR 패키지를 사용한다. 그전에 system.file(package= "taskschedulR")를 사용해서 패키지가 저장된 주소를 찾는다.
+
+![캡처](https://user-images.githubusercontent.com/49007889/56267485-eb417600-6129-11e9-97fb-5768211a5fbe.PNG)
+
+이제 script를 taskschduelR의 extdata 폴더에 옮긴다음 아래 코드를 실행한다.
 
 --------------------------
 
 <pre><code>
 if(!require(taskscheduleR))install.packages("taskscheduleR")
 library(taskscheduleR)
-myscript <- system.file("extdata", "script.R", package = "taskscheduleR")
+myscript <- system.file("extdata", "exp.R", package = "taskscheduleR")
 taskscheduler_create(taskname = "dailyload", rscript = myscript, 
-                     schedule = "DAILY", starttime = "10:30", startdate = format(Sys.Date(), "%Y/%m/%d"))
+                     schedule = "DAILY", starttime = "10:30", startdate = format(Sys.Date()+1, "%Y/%m/%d"))
 
 </code></pre>
 
