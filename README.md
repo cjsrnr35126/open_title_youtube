@@ -54,3 +54,8 @@ taskscheduler_create(taskname = "dailyload", rscript = myscript,
 
 -----------------------------
 
+실행하면 다음과같이 '코드파일명.log'가 생성된다. 이곳에 크롤링한 결과값들이 저장되어있다.
+
+![캡처](https://user-images.githubusercontent.com/49007889/56267802-d6191700-612a-11e9-9e37-ce58cb405aec.PNG)
+
+
