@@ -20,9 +20,9 @@
 library(rvest)
 #유튜브 인기탭 제목 크롤링
 y_url="https://www.youtube.com/feed/trending"
-html=read_html(y_url)
-html1=html %>% html_nodes("div") %>% html_nodes('h3') %>% html_nodes('a') %>% html_text()
-html
+html0=read_html(y_url)
+html1=html0 %>% html_nodes("div") %>% html_nodes('h3') %>% html_nodes('a') %>% html_text()
+html0
 #네이버tv 인기탭 제목 크롤링
 n_url="https://tv.naver.com/i/"
 html=read_html(n_url)
