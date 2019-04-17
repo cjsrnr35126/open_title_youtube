@@ -66,7 +66,7 @@ script가 저장된 장소에 .log 파일이 생성된다. .log 에 크롤링한
 
 -----------------------------
 
-![캡처](https://user-images.githubusercontent.com/49007889/56267802-d6191700-612a-11e9-9e37-ce58cb405aec.PNG)
+![캡처](https://user-images.githubusercontent.com/49007889/56306547-af380080-617d-11e9-8b75-2ac65f8583cb.PNG)
 
 -----------------------------
 
