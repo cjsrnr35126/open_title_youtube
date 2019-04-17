@@ -42,7 +42,7 @@ ndf=c(inner_title,content_title);ndf
 하루치 정보로는 턱없이 부족하다. 이제 위 코드를 매일 특정시간에 실행시켜서 데이터를 축적해야한다. <br>
 자동화를 위해 taskscheduleR 패키지를 사용한다. 그전에 system.file(package= "taskschedulR")를 사용해서 패키지가 저장된 주소를 찾는다.
 
-![캡처](https://user-images.githubusercontent.com/49007889/56267485-eb417600-6129-11e9-97fb-5768211a5fbe.PNG)
+![캡처](https://user-images.githubusercontent.com/49007889/56306682-105fd400-617e-11e9-9696-e86cd6b33faa.PNG)
 
 script를 taskschduelR의 extdata 폴더에 저장한 다음 아래 코드를 실행한다.
 
